@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/css-bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./css/stylo.css">
+    <script defer src="./js/app.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Info</h5>
+            <div class="card-body row">
+                <div class="col">
+                    <input type="text" class="form-control" name="Name" id="Name" placeholder="Name">
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control" name="Age" id="Age" placeholder="Age">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="CodeName" id="CodeName" placeholder="Code-Name">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header">Suit</h5>
+            <div class="card-body">
+                <button class="btn btn-primary" id="add-suit">+</button>
+                <div class="row" id="suits"></div>
+            </div>
+        </div>
+        <div class="card"> 
+            <h5 class="card-header">Secret Location</h5>
+            <div class="card-body row">
+                <div class="col-4">
+                    <input type="text" class="form-control" name="City" id="City" placeholder="City">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header">Poster</h5>
+            <div class="card-body row">
+                <div class="col">
+                    <label for="Poster">upload Poster</label>
+                    <input type="file" name="Poster" id="Poster">
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" id="add-hero">Add Hero</button>
+        <div class="heroes-cards"></div>
+    </div>
 </body>
 </html>

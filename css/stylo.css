@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .btn{
+        width: max-content;
+    }
+}
+
+.suits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+input {
+    Display: none;
+}
+
+Label {
+padding-block: .5em;
+padding-inline: 1em;
+text-align: center;
+Border-radius: 60px;
+Border: 1px dashed #999;
+transition: 0.3s ease-in-out;
+}
+
+Label:hover {
+  Color: #0680de;
+  Border: 1px dashed #0680de;
+}
+
+.heroes-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
