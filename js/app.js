@@ -25,6 +25,8 @@ function updateForm (inputs){
         
         if (input.name === "Suit"){
             info.Suit.push(input.value);
+        } else if (input.name === "URL"){
+            info.Poster = input.value;
         }
 
         input.value = "";
@@ -38,12 +40,11 @@ function updateForm (inputs){
         }
     })
 
-
     const heroesCards = document.createElement("div");
     heroesCards.className = "card";
     heroesCards.innerHTML = `
     <h5 class="card-header">${info.Name}/${info.Age}/${info.CodeName}</h5>
-    <div class="card-body">
+    <div class="card-body hero">
         <div class="HeroSuit">${info.Suit}</div>
         <div class="HeroLocation">${info.City}</div>
         <img src="${info.Poster}">
@@ -51,6 +52,20 @@ function updateForm (inputs){
     `;
 
     heroesCardsContainer.appendChild(heroesCards);
+
+    let infoJSON = JSON.stringify(info);
+
+    // Almacena el JSON en localStorage
+    localStorage.setItem('info', infoJSON);
+
+    // Recupera el JSON del localStorage
+    let infoRecuperado = localStorage.getItem('info');
+    
+    // Convierte el JSON de nuevo a un objeto
+    let diccionarioObjeto = JSON.parse(infoRecuperado);
+
+    // Imprime el diccionario en un div
+    document.getElementById('output').innerHTML = JSON.stringify(diccionarioObjeto, null, 2);
 
     heroes.push(info)
     console.table(heroes)

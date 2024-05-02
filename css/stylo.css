@@ -30,6 +30,7 @@ padding-inline: 1em;
 text-align: center;
 Border-radius: 60px;
 Border: 1px dashed #999;
+margin-bottom: 1em;
 transition: 0.3s ease-in-out;
 }
 
@@ -42,4 +43,8 @@ Label:hover {
     display: flex;
     flex-direction: column;
     gap: 1em;
+}
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.137);
 }
